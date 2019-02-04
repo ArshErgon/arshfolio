@@ -103,8 +103,7 @@
   </div>
 </div>
   <!--/ Intro Skew End /-->
-
-  <section id="about" class="about-mf sect-pt4 route">
+ <section id="about" class="about-mf sect-pt4 route">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -115,7 +114,7 @@
                   <div class="col-sm-6 col-md-5">
                     <div class="about-img">
                       {% for forms in form %}
-                      <img style="height:150px; width:150px" src="{{ forms.image.url }}" class="responsive" alt="Coming Soon">
+                      <img style="height:150px; width:150px" src="{{ forms.image.url }}" class="responsive" alt="Coming Soon"/>
                       {% endfor %}
                     </div>
                   </div>
@@ -157,20 +156,22 @@
                   </div>
                 </div>
               </div>{% endfor %}
-              <div class="col-md-6">
+
+             <div class="col-md-6">
                 <div class="about-me pt-4 pt-md-0">
                   <div class="title-box-2">
                     <h5 class="title-left">
                       About me
                     </h5>
                   </div>
-                    {% for forms in form %}
+                  {% for forms in form %}
                   <p class="lead">
-                    {{ forms.message|safe }}
-                  </p>
-                    {% endfor %}
+                    {{ forms.message }}
+                   </p>
+                   {% endfor %}
                 </div>
               </div>
+
             </div>
           </div>
         </div>

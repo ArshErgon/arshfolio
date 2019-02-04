@@ -103,81 +103,85 @@
   </div>
 </div>
   <!--/ Intro Skew End /-->
- <section id="about" class="about-mf sect-pt4 route">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="box-shadow-full">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="row">
-                  <div class="col-sm-6 col-md-5">
-                    <div class="about-img">
-                      {% for forms in form %}
-                      <img style="height:150px; width:150px" src="{{ forms.image.url }}" class="responsive" alt="Coming Soon"/>
+
+  <section id="about" class="about-mf sect-pt4 route">
+   <div class="container">
+     <div class="row">
+       <div class="col-sm-12">
+         <div class="box-shadow-full">
+           <div class="row">
+             <div class="col-md-6">
+               <div class="row">
+                 <div class="col-sm-6 col-md-5">
+                   <div class="about-img">
+                     {% for forms in form %}
+                     <img style="height:150px; width:150px" src="{{ forms.image.url }}" class="responsive" alt="Coming Soon"/>
                       {% endfor %}
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-7">
-                    <div class="about-info">
-                      <p><span class="title-s">Name: </span> <span>Arsh Ali</span></p>
-                      <p><span class="title-s">Profile: </span> <span>Full Stack Developer</span></p>
-            {% for x in form %}<p><span class="title-s">Email: </span> <span>{{ x.email }}</span></p>{% endfor %}
-                    </div>
-                  </div>
-                </div>
-                {% for skill in skill_context %}
-                <div class="skill-mf">
-                  <p class="title-s">Skill</p>
-                  <span>HTML5</span> <span class="pull-right">{{ skill.HTML5 }}</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: {{ skill.HTML5 }}" aria-valuenow="{{ skill.HTML5 }}" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>CSS3</span> <span class="pull-right">{{ skill.CSS3 }}</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width:{{ skill.CSS3 }}" aria-valuenow="{{ skill.CSS3 }}" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>Django</span> <span class="pull-right">{{ skill.DJANGO }}</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: {{ skill.DJANGO }}" aria-valuenow="{{ skill.DJANGO }}" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>Python</span> <span class="pull-right">{{ skill.PYTHON }}</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: {{ skill.PYTHON }}" aria-valuenow="{{ skill.PYTHON }}" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                   <span>Android</span> <span class="pull-right">{{ skill.ANDROID }}</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: {{ skill.ANDROID }}" aria-valuenow="{{ skill.ANDROID }}" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>{% endfor %}
+                   </div>
+                 </div>
+                 <div class="col-sm-6 col-md-7">
+                   <div class="about-info">
+                     <p><span class="title-s">Name: </span> <span>Arsh Ali</span></p>
+                     <p><span class="title-s">Profile: </span> <span>Full Stack Developer</span></p>
+                      {% for x in form %}<p><span class="title-s">Email: </span> <span>{{ x.email }}</span></p>{% endfor %}
+                   </div>
+                 </div>
+               </div>
+               {% for skill in skill_context %}
+               <div class="skill-mf">
+                 <p class="title-s">Skill</p>
+                 <span>HTML5</span> <span class="pull-right">{{ skill.HTML5 }}</span>
+                 <div class="progress">
+                   <div class="progress-bar" role="progressbar" style="width:{{ skill.HTML5 }};" aria-valuenow="85" aria-valuemin="0"
+                     aria-valuemax="100"></div>
+                 </div>
+                 <span>CSS3</span> <span class="pull-right">{{ skill.CSS3 }}</span>
+                 <div class="progress">
+                   <div class="progress-bar" role="progressbar" style="width:{{ skill.CSS3 }}" aria-valuenow="75" aria-valuemin="0"
+                     aria-valuemax="100"></div>
+                 </div>
+                 <span>Django</span> <span class="pull-right">{{ skill.DJANGO }}</span>
+                 <div class="progress">
+                   <div class="progress-bar" role="progressbar" style="width: {{ skill.DJANGO }}" aria-valuenow="50" aria-valuemin="0"
+                     aria-valuemax="100"></div>
+                 </div>
+                 <span>Python</span> <span class="pull-right">{{ skill.PYTHON }}</span>
+                 <div class="progress">
+                   <div class="progress-bar" role="progressbar" style="width:{{ skill.PYTHON }}" aria-valuenow="70" aria-valuemin="0"
+                     aria-valuemax="100"></div>
+                 </div>
+                  <span>Android</span> <span class="pull-right">{{ skill.ANDROID }}</span>
+                 <div class="progress">
+                   <div class="progress-bar" role="progressbar" style="width: {{ skill.ANDROID }}" aria-valuenow="30" aria-valuemin="0"
+                     aria-valuemax="100"></div>
+                 </div>
+               </div>
+             </div>
+             {% endfor %}
 
              <div class="col-md-6">
-                <div class="about-me pt-4 pt-md-0">
-                  <div class="title-box-2">
-                    <h5 class="title-left">
-                      About me
-                    </h5>
-                  </div>
-                  {% for forms in form %}
-                  <p class="lead">
-                    {{ forms.message }}
-                   </p>
+               <div class="about-me pt-4 pt-md-0">
+                 <div class="title-box-2">
+                   <h5 class="title-left">
+                     About me
+                   </h5>
+                 </div>
+                   {% for forms in form %}
+                 <p class="lead">
+                   {{ forms.message|safe }}
+                 </p>
                    {% endfor %}
-                </div>
-              </div>
+               </div>
+             </div>
+           </div>
+           
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!--/ Section Services Star /-->
   <section id="service" class="services-mf route">

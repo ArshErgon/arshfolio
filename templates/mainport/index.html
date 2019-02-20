@@ -368,6 +368,34 @@
 
         <div class="col-md-4">
           <div class="work-box">
+            <a href="{% static 'projects/todoitems.png' %}" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="{% static 'projects/todoitems.png' %}" alt="" class="img-fluid">
+              </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Todo list</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">DJANGO</span> / <span class="w-date">12|3|2019</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="https://github.com/ArshErgon/Todo-Django"><span class="ion-social-github"></span></a>
+                    </div>
+                  </div>
+
+                </div>
+                <a href="http://todoitems.herokuapp.com"><figcaption class="figure-caption text-center">URL: Todo list</figcaption></a>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="work-box">
             <a href="{{ project.project_image.url }}" data-lightbox="gallery-mf">
               <div class="work-img">
                 <img src="{{ project.project_image.url }}" alt="" class="img-fluid">

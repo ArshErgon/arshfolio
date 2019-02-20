@@ -17,7 +17,6 @@ def home_view(request):
     getintouch_context = GetInTouch.objects.all()
     project_context = Project.objects.all()
     quote_context = Quote.objects.all()
-    print(quote_context)
     # print(request.method)
 
     return render(request, 'mainport/index.html', {
@@ -29,8 +28,7 @@ def home_view(request):
                             'socialmedia_context'   :   socialmedia_context,
                             'getintouch_context'    :   getintouch_context,
                             'project_context'       :   project_context,
-                            'quote_context'         :   quote_context,    
-                            # 'messageme_context'     :   messageme_context,
+                            'quote_context'         :   quote_context,
                         }
                     )
 

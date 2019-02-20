@@ -26,6 +26,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="{% static 'mainport/css/style.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'home.css' %}">
 
   <!-- =======================================================
 
@@ -114,9 +115,7 @@
                <div class="row">
                  <div class="col-sm-6 col-md-5">
                    <div class="about-img">
-                     {% for forms in form %}
-                     <img style="height:150px; width:150px" src="{{ forms.image.url }}" class="responsive" alt="Coming Soon"/>
-                      {% endfor %}
+                     <img style="height:150px; width:150px" src="{% static 'arsh/arsh.png' %}" class="responsive" alt="Coming Soon"/>
                    </div>
                  </div>
                  <div class="col-sm-6 col-md-7">
@@ -174,13 +173,13 @@
                </div>
              </div>
            </div>
-           
+
          </div>
        </div>
      </div>
    </div>
  </section>
- 
+
 
 
   <!--/ Section Services Star /-->
@@ -310,7 +309,63 @@
         </div>
       </div>
       <div class="row">
-        {% for project in project_context %}
+
+         {% for project in project_context %}
+
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="{% static 'projects/blogify.png' %}" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="{% static 'projects/blogify.png' %}" alt="" class="img-fluid">
+              </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Blogify</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">DJANGO</span> / <span class="w-date">8|3|2019</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="http://github.com/arshErgon/blogify-heroku"><span class="ion-social-github"></span></a>
+                    </div>
+                  </div>
+
+                </div>
+                <a href="http://blogifyi.herokuapp.com"><figcaption class="figure-caption text-center">URL: Blogfyi</figcaption></a>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="{% static 'projects/arshfolio.png' %}" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="{% static 'projects/arshfolio.png' %}" alt="" class="img-fluid">
+              </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">ArshFolio</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">DJANGO</span> / <span class="w-date">25|2|2019</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="http://github.com/arshErgon/arshfolio"><span class="ion-social-github"></span></a>
+                    </div>
+                  </div>
+
+                </div>
+                <a href="http://arshfolio.herokuapp.com"><figcaption class="figure-caption text-center">URL: ArshFolio</figcaption></a>
+              </div>
+          </div>
+        </div>
+
         <div class="col-md-4">
           <div class="work-box">
             <a href="{{ project.project_image.url }}" data-lightbox="gallery-mf">
@@ -335,10 +390,10 @@
                 </div>
                 <a href="{{ project.project_url }}"><figcaption class="figure-caption text-center">URL: {{ project.project_name }}</figcaption></a>
               </div>
-            
           </div>
         </div>
-        {% endfor %}
+
+         {% endfor %}
     </div>
   </section>
 
@@ -349,9 +404,9 @@
     <div class="overlay-mf"></div>
     <div class="container">
       <div class="row">
-        
+
         <div class="col-md-12">
-          
+
           <div id="testimonial-mf" class="owl-carousel owl-theme">
 
             {% for quotes in quote_context %}

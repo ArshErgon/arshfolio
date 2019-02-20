@@ -2,9 +2,13 @@
 from django.shortcuts import render, redirect
 
 from aboutme.models import AboutModel
+
 from services.models import ServiceModel
+
 from skills.models import SkillModel
+
 from sendmessageme.models import  MessageMe, CoderModel, SocialMediaModel, GetInTouch
+
 from .models import Project, Quote
 
 def home_view(request):

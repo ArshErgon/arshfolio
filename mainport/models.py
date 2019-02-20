@@ -19,7 +19,7 @@ class Project(models.Model):
 
 class Quote(models.Model):
 	name = models.CharField(max_length=50)
-	quote = models.CharField(max_length=100)
+	quote = models.TextField()
 
 	def __str__(self):
 		return "%s by %s" % (self.quote[:10], self.name)
